@@ -22,6 +22,7 @@ file {$install_dir:
     content => epp('minecraft/minecraft.service', {
       install_dir => $install_dir
     })
+    }
     service {'minecraft':
     ensure => running,
     enable => true,
