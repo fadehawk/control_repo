@@ -8,7 +8,7 @@ file {$install_dir:
   file {'/opt/minecraft/server.jar':
     ensure => file,
     source => $url,
-    before => service['minecraft'],
+    before => Service['minecraft'],
   }
   package {'java':
     ensure => present,
